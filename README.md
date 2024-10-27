@@ -174,7 +174,7 @@ Also, we can see using slicers and pie chart, we can differentiate the availabil
 ### Total Revenue, Count of Customer Id, Sum of Product Quantity. 
 Using the card Visuals, we were able to call out the values of the total revenue, distinct count of customer Id and Sum of Product Quantity sold with the values cross checked with that of the summarized pivot table above. 
 
-![Screenshot (104)](https://github.com/user-attachments/assets/e4f7fcb1-096e-4c05-9c1e-abb50294cff0)
+![Screenshot (105)](https://github.com/user-attachments/assets/65c43e10-7c10-424b-9c41-dde6364816f9)
 ![Screenshot (86)](https://github.com/user-attachments/assets/f457a385-b70b-42eb-9323-f2f05c5db0a6)
 ![Screenshot (87)](https://github.com/user-attachments/assets/979c15a0-b76a-49fc-a816-1477b154470a)
 
