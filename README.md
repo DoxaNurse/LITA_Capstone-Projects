@@ -32,6 +32,6 @@ In the intial phase, we carried out:
 1. Data Loading and Inspection: the sales data was downloaded and uploaded on the Microsoft excel sheet. 
 2. Data formatting and cleaning: the data was checked for duplicates and blanks which was cleared using the data tab and removing the blanks option on the find and select tab. 
 3. handling missing variables: The revenue was calculated by UNIT PRICE * QUANTITY and then using flashfill to fill the remaining column
-- also the AVERAGE REVENUE was caculated using `AVERAGEIF function 
+- also the AVERAGE REVENUE was caculated using AVERAGEIF function 
    
 
