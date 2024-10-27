@@ -64,34 +64,28 @@ This section contains SQL queries used for summarizing and analyzing the sales d
 ```SQL
 select * from [dbo].[capstone sales]
 
-`![Alt Text](![Screenshot (89)](https://github.com/user-attachments/assets/01eb01e1-1b41-41df-8b79-37e0271485b0))`
-
 ``````Query 1````Retrieve total sales for each category
 select Product, 
 sum (revenue) as Total_sales
 from [dbo].[capstone sales]
 group by Product
-(![Screenshot (90)](https://github.com/user-attachments/assets/52334202-1abc-40b0-9d97-d25ab987830f))
 
 ------Query 2-----number of sales transactions in each region----
 select region, 
 count(revenue) as salestransactions
 from[dbo].[capstone sales]
 group by region
-![Screenshot (91)](https://github.com/user-attachments/assets/f247061f-a82b-455d-a11b-2cf6c4117c78)
 
 -----Query 3 ------highest selling product by total sales value---
 select top 1 Product, 
 sum(revenue) as total_sales
 from[dbo].[capstone sales]
 group by Product
-![Screenshot (92)](https://github.com/user-attachments/assets/c8db6b79-db05-4e31-83af-726b9bd67879)
 
 -------Query 4------calculate Total Revenue per product-----
 select product, sum(revenue) as Total_Revenue
 from [dbo].[capstone sales]
 Group by Product
-![Screenshot (93)](https://github.com/user-attachments/assets/9fd7fb53-d13b-484d-8472-f9bab5d30d94)
 
 -----Query 5----monthly sales total for the current year----
 select DATENAME(month, orderDate) As SalesMonth,
@@ -100,16 +94,14 @@ from [dbo].[capstone sales]
 where Year(OrderDate)=2024
 Group by DATENAME(MONTH, OrderDate), Month(OrderDate)
 order by MONTH(OrderDate)
-![Screenshot (94)](https://github.com/user-attachments/assets/65c75644-d000-488c-b49d-c44a32a0a24f)
 
-----query 6-----top 5 customers by total purchase amount-----
+----Query 6-----top 5 customers by total purchase amount-----
 select top 5 Customer_Id,
 Sum(Revenue) as TotalPurchaseAmount
 from [dbo].[capstone sales]
 group by Revenue, customer_id
 order by sum(revenue)
 desc
-![Screenshot (95)](https://github.com/user-attachments/assets/c681156f-b28c-4b59-bd6d-30ffd10843d3)
 
 ------Query 7----percentage of total sales cotnributed by each region------
 SELECT region,SUM(revenue) AS total_sales,
@@ -117,14 +109,15 @@ SELECT region,SUM(revenue) AS total_sales,
 AS percentage_of_total_sales
 FROM[dbo].[capstone sales]
 GROUP By region:
-![Screenshot (96)](https://github.com/user-attachments/assets/5023d6b8-dd0c-4276-aab3-019a37d0fb14)
- 
 
 ----Query 8-----Identify products with no sales in the last quarter-----
 select p.Product
 from (SELECT DISTINCT Product FROM[capstone sales]) p
 left Join [capstone sales] s on p. product =s.product
 And s.OrderDate >= '2023-10-01' and s.OrderDate < '2024-01-01'
-where s.Product IS NULL
+where s.Product IS NULL 
 
-![Screenshot (97)](https://github.com/user-attachments/assets/d47562b2-958f-4746-9d4f-38ed8514364f)
+## Visualization
+
+
+
