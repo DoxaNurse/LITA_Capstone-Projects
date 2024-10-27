@@ -1,5 +1,5 @@
 # LITA_Capstone-Projects
-## Sales Data Analysis 
+# Sales Data Analysis 
 This project analyzes the sales performance of a retail store. We will be exploring sales data to uncover key insights such as top-selling products, regional performance, and monthly sales trends. The goal is to produce an interactive Power BI dashboard that highlights all these findings. 
 ## Data Description
 - **Order ID**: Unique identifier for each order.
@@ -12,7 +12,7 @@ This project analyzes the sales performance of a retail store. We will be explor
 - **Revenue**: Total revenue from the order.
 - **Average Revenue**: Average revenue per order
 
-  ## Skills
+## Skills
 - SQL: Proficient in writing complex queries, data manipulation, and database management.
 - Microsoft Excel: Advanced skills in data analysis, pivot tables, VLOOKUP, and data visualization.
 - Power BI: Experienced in creating interactive dashboards and reports to visualize data insights.
@@ -63,61 +63,135 @@ In the intial phase, we carried out:
 This section contains SQL queries used for summarizing and analyzing the sales data.
 ```SQL
 select * from [dbo].[capstone sales]
+````
+![Screenshot (89)](https://github.com/user-attachments/assets/cf1e1e90-330a-486c-9342-db250ac1d6d8)
 
-``````Query 1````Retrieve total sales for each category
+```SQL
+Query 1````Retrieve total sales for each category
 select Product, 
 sum (revenue) as Total_sales
 from [dbo].[capstone sales]
 group by Product
+```
+![Screenshot (90)](https://github.com/user-attachments/assets/2c485f51-43cc-4f2f-a359-46f9225589a0)
 
-------Query 2-----number of sales transactions in each region----
+```SQL
+Query 2-----number of sales transactions in each region----
 select region, 
 count(revenue) as salestransactions
 from[dbo].[capstone sales]
 group by region
+```
+![Screenshot (91)](https://github.com/user-attachments/assets/3429a47a-19f8-4e8d-afd9-cdfff0b2cf5a)
 
------Query 3 ------highest selling product by total sales value---
+```SQL
+Query 3 ------highest selling product by total sales value---
 select top 1 Product, 
 sum(revenue) as total_sales
 from[dbo].[capstone sales]
 group by Product
+```
+![Screenshot (92)](https://github.com/user-attachments/assets/cd3ff941-d80b-4691-bd6c-1ca2b64fe5e4)
 
--------Query 4------calculate Total Revenue per product-----
+```SQL
+Query 4------calculate Total Revenue per product-----
 select product, sum(revenue) as Total_Revenue
 from [dbo].[capstone sales]
 Group by Product
+```
+![Screenshot (93)](https://github.com/user-attachments/assets/a102470d-b29a-4626-95e0-377e29a855e6)
 
------Query 5----monthly sales total for the current year----
+```SQL
+Query 5----monthly sales total for the current year----
 select DATENAME(month, orderDate) As SalesMonth,
 Sum(Revenue) as Monthlysales
 from [dbo].[capstone sales]
 where Year(OrderDate)=2024
 Group by DATENAME(MONTH, OrderDate), Month(OrderDate)
 order by MONTH(OrderDate)
+```
+![Screenshot (94)](https://github.com/user-attachments/assets/5811867e-0c16-415f-a3e2-f806d3d05512)
 
-----Query 6-----top 5 customers by total purchase amount-----
+```SQL
+Query 6-----top 5 customers by total purchase amount-----
 select top 5 Customer_Id,
 Sum(Revenue) as TotalPurchaseAmount
 from [dbo].[capstone sales]
 group by Revenue, customer_id
 order by sum(revenue)
 desc
+```
+![Screenshot (95)](https://github.com/user-attachments/assets/9c66aaa0-a958-45c3-81f4-4ef6b423c206)
 
-------Query 7----percentage of total sales cotnributed by each region------
+```SQL
+Query 7----percentage of total sales cotnributed by each region------
 SELECT region,SUM(revenue) AS total_sales,
 (SUM(revenue) *100 / (SELECT SUM(revenue) FROM [dbo].[Sales Project dataset])) 
 AS percentage_of_total_sales
 FROM[dbo].[capstone sales]
 GROUP By region:
+```
+![Screenshot (96)](https://github.com/user-attachments/assets/fa148c0e-cc15-4dd8-8bcd-b608ebec4f33)
 
-----Query 8-----Identify products with no sales in the last quarter-----
+```SQL
+Query 8-----Identify products with no sales in the last quarter-----
 select p.Product
 from (SELECT DISTINCT Product FROM[capstone sales]) p
 left Join [capstone sales] s on p. product =s.product
 And s.OrderDate >= '2023-10-01' and s.OrderDate < '2024-01-01'
 where s.Product IS NULL 
+```
+![Screenshot (97)](https://github.com/user-attachments/assets/4a2d9ad8-7663-4ed0-9062-4ab8f55939aa)
 
-## Visualization
+## Data Visualization with Power Bi
+Here, we will be analysing the columns on different visuals which will include sales overview, top-performing products, and regional breakdowns. 
+### Sales Overview
+this shows a Line chart showing revenue trends over time, with the key indicators being revenue and Order date(Month). We can see the peak month(february) with 0.55M revenue and the lowest month being September with 0.03M. 
 
+![Screenshot (80)](https://github.com/user-attachments/assets/bad8f3c8-2098-4eb6-a4df-c773906cb2ff)
+
+### Top performing Product
+A Clustered column chart displaying total revenue by product with shoes generating the highest revenue at O.61M and socks generaring the lowest at 0.18M. 
+
+![Screenshot (81)](https://github.com/user-attachments/assets/54cbc48a-c508-4d2b-bcfd-5810959e5739)
+
+### Product Popularity
+A pie chart showing the quantity sold for each product with Hats being the most popular(16k) and Jackets being the least(5k). 
+![Screenshot (98)](https://github.com/user-attachments/assets/2548e544-ba6c-45e5-86ba-ea6183bf0fb9)
+
+### Region Breakdown
+ A clustered bar chart showing total revenue by region with Southern Region recording the highest sales at 0.93M, and the western region recording the lowest sales at 0.30M. 
+
+![Screenshot (82)](https://github.com/user-attachments/assets/b275ba85-1e06-4baf-b7f1-12857e333793)
+
+Also, we can see using slicers and pie chart, we can differentiate the availability of products, its revenue and its quantity in relation to various regions. East( shirt, Hatd, jackets, shoes), North(shirt, jackets, hats), South(shoes, gloves and socks), and West(hats, socks, gloves, shoes)
+
+ ![Screenshot (100)](https://github.com/user-attachments/assets/69e5a6a3-8e7a-41be-a2ba-195b1b04dc00)
+![Screenshot (101)](https://github.com/user-attachments/assets/3e002eeb-2c0d-4078-9314-8e64745a12d6)
+![Screenshot (102)](https://github.com/user-attachments/assets/8f78c06c-24f6-42e1-bcc7-9ca561b98bb4)
+![Screenshot (103)](https://github.com/user-attachments/assets/0134dd05-b7f5-4977-9c69-17328eb6e935)
+
+### Total Revenue, Count of Customer Id, Sum of Product Quantity. 
+Using the card Visuals, we were able to call out the values of the total revenue, distinct count of customer Id and Sum of Product Quantity sold with the values cross checked with that of the summarized pivot table above. 
+
+![Screenshot (104)](https://github.com/user-attachments/assets/e4f7fcb1-096e-4c05-9c1e-abb50294cff0)
+![Screenshot (86)](https://github.com/user-attachments/assets/f457a385-b70b-42eb-9323-f2f05c5db0a6)
+![Screenshot (87)](https://github.com/user-attachments/assets/979c15a0-b76a-49fc-a816-1477b154470a)
+
+
+## Conclusion
+The comprehensive analysis of the Capstone sales data within this repository has provided valuable insights into sales overview, product performance, and regional trends. By leveraging SQL queries, visualizations, and detailed analysis, we've been able to:
+
+- Identify the most profitable products and regions.
+
+- Understand the average revenue per product.
+
+- Analyze monthly sales trends to uncover seasonal patterns.
+
+- Highlight the impact of high-value products on overall revenue.
+
+These insights are crucial for strategic decision-making, allowing us to optimize pricing strategies for expensive products which has low revenue generation, tailor marketing efforts into regions where some of the products are not available, and improve inventory management. By continuously refining our approach based on data-driven findings, we can drive significant growth and enhance overall business performance of Capstone.
+
+# Customer Data Analysis
 
 
