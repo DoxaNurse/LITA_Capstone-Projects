@@ -221,6 +221,27 @@ These insights are crucial for strategic decision-making, allowing us to optimiz
 
 # Customer Segmentation for a Subscription Service Analysis
 ---
+[Project Overview](#project-overview)
+
+[Data Description](#data-description)
+
+[Skills](#skills)
+
+[Repository Structure](#repository-structure)
+
+[Tools used](#tools-used)
+
+[Data Cleaning and Preparation](#data-cleaning-and-preparation)
+
+[Data Summarization with Pivot Table](#data-summarization-with-pivot-table)
+
+[SQL Queries-Data Aggregation and Summarization](#sql-queries-data-aggregation-and-summarization)
+
+[Data Visualization with Power Bi](#data-visualization-with-power-bi)
+
+[Conclusion](#conclusion)
+
+## Project Overview
  This project involves analyzing customer data for a subscription service to identify segments and trends. The goal is to understand customer behavior, track subscription types, and identify key trends in cancellations and renewals. 
  
 ## Data Description
@@ -288,7 +309,7 @@ In the intial phase, we carried out:
 
 ![Screenshot (67)](https://github.com/user-attachments/assets/3ac99cc1-bea5-47c5-bec9-5a660d04e472)
 
-## SQL Queries ( Data Aggregation and Summarization)
+## SQL Queries-Data Aggregation and Summarization
 
 This section contains SQL queries used for summarizing and analyzing the Customer Segmentation data.
 ```SQL
