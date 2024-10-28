@@ -1,5 +1,30 @@
 # LITA_Capstone-Projects
-# Sales Data Analysis 
+
+Customer Segmentation for a Subscription Service Analysis
+
+# Sales Performance Analysis
+---
+[Project Overview](#project-overview)
+
+[Data Description](#data-description)
+
+[Skills](#skills)
+
+[Repository Structure](#repository-structure)
+
+[Tools used](#tools-used)
+
+[Data Cleaning and Preparation](#data-cleaning-and-preparation)
+
+[Data Summarization with Pivot Table](#data-summarization-with-pivot-table)
+
+[SQL Queries-Data Aggregation and Summarization](#sql-queries-data-aggregation-and-summarization)
+
+[Data Visualization with Power Bi](data-visualization-with-power-bi)
+
+[Conclusion](#conclusion)
+
+## Project Overview
 This project analyzes the sales performance of a retail store. We will be exploring sales data to uncover key insights such as top-selling products, regional performance, and monthly sales trends. The goal is to produce an interactive Power BI dashboard that highlights all these findings. 
 ## Data Description
 - **Order ID**: Unique identifier for each order.
@@ -13,12 +38,12 @@ This project analyzes the sales performance of a retail store. We will be explor
 - **Average Revenue**: Average revenue per order
 
 ## Skills
-- SQL: Proficient in writing complex queries, data manipulation, and database management.
-- Microsoft Excel: Advanced skills in data analysis, pivot tables, VLOOKUP, and data visualization.
-- Power BI: Experienced in creating interactive dashboards and reports to visualize data insights.
-- Data Visualization: Creating insightful charts and dashboards to communicate findings effectively.
-- Data Cleaning: Expertise in cleaning and preparing data for analysis.
-- Statistical Analysis: Applying statistical methods to analyze data and draw meaningful conclusions.
+- **SQL**: Proficient in writing complex queries, data manipulation, and database management.
+- **Microsoft Excel**: Advanced skills in data analysis, pivot tables, VLOOKUP, and data visualization.
+- **Power BI**: Experienced in creating interactive dashboards and reports to visualize data insights.
+- **Data Visualization**: Creating insightful charts and dashboards to communicate findings effectively.
+- **Data Cleaning**: Expertise in cleaning and preparing data for analysis.
+- **Statistical Analysis**: Applying statistical methods to analyze data and draw meaningful conclusions.
 
 ## Repository Structure
 - **data/**: Raw data files.
@@ -34,31 +59,31 @@ This project analyzes the sales performance of a retail store. We will be explor
 
 ## Data Cleaning and Preparation
 In the intial phase, we carried out:
-1. Data Loading and Inspection: the sales data was downloaded and uploaded on the Microsoft excel sheet. 
-2. Data formatting and cleaning: the data was checked for duplicates and blanks which was cleared using the data tab and removing the blanks option on the find and select tab. 
-3. handling missing variables: The revenue was calculated by UNIT PRICE * QUANTITY and then using flashfill to fill the remaining column
+1. **Data Loading and Inspection**: the sales data was downloaded and uploaded on the Microsoft excel sheet. 
+2. **Data formatting and cleaning**: the data was checked for duplicates and blanks which was cleared using the data tab and removing the blanks option on the find and select tab. 
+3. **handling missing variables**: The revenue was calculated by UNIT PRICE * QUANTITY and then using flashfill to fill the remaining column
 - also the AVERAGE REVENUE was caculated using AVERAGEIF function
 
 ## Data Summarization with Pivot Table
-- This table indicates Regional Performance with the Southern Region having more sales of about 928,000,
+- **Regional Performance**This table indicates Regional Performance with the Southern Region having more sales of about 928,000.
 
 ![Screenshot (58)](https://github.com/user-attachments/assets/51098c4c-eff9-4221-8896-fff517911420)
 
-- This table indicates the highest performing product in sales with the product being shoes and shirt going after with a difference of about 150,000 whilst the other analysis reveals that Hat consistently outperforms other products in terms of quantity sold with shoes trailing behind with about 5,000 difference.
+- **Hughest Perfroming Products**This table indicates the highest performing product in sales with the product being shoes and shirt going after with a difference of about 150,000 whilst the other analysis reveals that Hat consistently outperforms other products in terms of quantity sold with shoes trailing behind with about 5,000 difference.
 
 ![Screenshot (59)](https://github.com/user-attachments/assets/20ecb298-17f0-4134-8b08-57ac4843a2eb)
 ![Screenshot (62)](https://github.com/user-attachments/assets/435218b3-0892-4f7e-ba6e-35f537ba453d)
 
-- This table indicates the monthly sales trend across the two years with the month of Febrauary having the Peak Sales.  The analysis shows that febrauary consistently have the highest sales, likely due to reasons such as holiday seasons, promotions,etc. while the month of Febrauary had the lowest sales.
+- **Monthly sales trend**This table indicates the monthly sales trend across the two years with the month of Febrauary having the Peak Sales.  The analysis shows that febrauary consistently have the highest sales, likely due to reasons such as holiday seasons, promotions,etc. while the month of Febrauary had the lowest sales.
  
 ![Screenshot (60)](https://github.com/user-attachments/assets/ebd43b09-1bfa-49e3-989e-f3a0e7b690a9)
 
-- This table, the average sales revenue per product  provides a detailed look at the revenue generated by each product on average.  Products with the highest average sales revenue, such as Shirt, indicate strong market demand and effective pricing strategies.
+- **Average sales revenue per product**This table, the average sales revenue per product  provides a detailed look at the revenue generated by each product on average.  Products with the highest average sales revenue, such as Shirt, indicate strong market demand and effective pricing strategies.
 
 ![Screenshot (61)](https://github.com/user-attachments/assets/cbfa94c1-03b8-4d29-ad4c-3fca68c29c35)
 
 
-## SQL Queries ( Data Aggregation and Summarization)
+## SQL Queries-Data Aggregation and Summarization
 
 This section contains SQL queries used for summarizing and analyzing the sales data.
 ```SQL
@@ -192,6 +217,217 @@ The comprehensive analysis of the Capstone sales data within this repository has
 
 These insights are crucial for strategic decision-making, allowing us to optimize pricing strategies for expensive products which has low revenue generation, tailor marketing efforts into regions where some of the products are not available, and improve inventory management. By continuously refining our approach based on data-driven findings, we can drive significant growth and enhance overall business performance of Capstone.
 
-# Customer Data Analysis
+# Customer Segmentation for a Subscription Service Analysis
+---
+ This project involves analyzing customer data for a subscription service to identify segments and trends. The goal is to understand customer behavior, track subscription types, and identify key trends in cancellations and renewals. 
+ 
+## Data Description
+The dataset includes the following columns:
+- **Customer ID**: Unique identifier for each customer.
+- **Customer Name**: Name of the customer.
+- **Region**: The sales customers
+- **Subscription Type**: Type of subscription purchased.
+- **Subscription Start**: Start date of the subscription.
+- **Subscription End**: End date of the subscription.
+- **Cancelled**: Indicates whether the subscription was cancelled.
+- **Subscription Duration**: Duration of the subscription in months.
+
+## Skills
+- **SQL**: Proficient in writing complex queries, data manipulation, and database management.
+- **Microsoft Excel**: Advanced skills in data analysis, pivot tables, and data summarization
+- **Power BI**: Experienced in creating interactive dashboards and reports to visualize data insights.
+- **Data Visualization**: Creating insightful charts and dashboards to communicate findings effectively.
+- **Data Cleaning**: Expertise in cleaning and preparing data for analysis.
+- **Statistical Analysis**: Applying statistical methods to analyze data and draw meaningful conclusions.
+  
+## Repository Structure
+- **data/**: Raw data files.
+- **scripts/**: SQL queries and data cleaning scripts.
+- **visualizations/**: Images and files of the visualizations created.
+
+## Tools used
+- Microsoft Excel for data for data analysis, cleaning and visu-alization[Download Here](https://microsoft.com)
+- SQL- Structured query language for Querying of Data[Download Here](https://www.mysql.com)
+- Github for Portfolio building [Download Here](https://github.com)
+- Power Bi for Data Cleaning and visualization. [Download Here](https://powerbi.microsoft.com/en-us/downloads/)
+
+## Data Cleaning and Preparation
+In the intial phase, we carried out:
+1. **Data Loading and Inspection**: the sales data was downloaded and uploaded on the Microsoft excel sheet. 
+2. **Data formatting and cleaning**: the data was checked for duplicates and blanks which was cleared using the data tab and removing the blanks option on the find and select tab. 
+3. **handling missing variables**: The subscription duration was calculated with the DATEDIFF function and filling the necessary arrays, which returned 12 months and FLASH FILL was applied to get for the other rows.
+
+## Data Summarization with Pivot Table
+- **Churn rate Analysis**: This pivot table shows the number of customers that cancelled their subscription(TRUE) versus the active customers(FALSE) in which those that did not cancel were more with about 3,000 difference.
+
+![Screenshot (65)](https://github.com/user-attachments/assets/ea956c38-4aa0-4768-bbec-0bafec989c33)
+
+- **Churn rate by Subscription type**: in this table, we analysed each subscription type and the number of cancellation in relation to it. The Premium subscription type has more cancellations(5,064) in relation to its returning customers with little difference in cancellations compared to Standard, while the Basic has more Active customers(11,864).
+
+![Screenshot (106)](https://github.com/user-attachments/assets/0f9f416d-c2d3-412f-ab2d-da52bc9a2506)
+
+- **Subscription type Popularity**: The basic Plan has more customers going for it which the value(16,921) is twice the other subscription types.
+
+  ![Screenshot (66)](https://github.com/user-attachments/assets/9c6a76c8-5fe2-494d-9b02-8f0dc4729e38)
+
+- **Revenue Analysis**: this table highlights each subscription type revenue contribution with the Basic Plan generating the highest at 33,776,735. 
+
+![Screenshot (64)](https://github.com/user-attachments/assets/3b008730-a627-4754-958f-88120e66a276)
+
+- **Average Subsciption duration**: Thus table summarizes the average subscription duration for each subscription type in months with the average durstion for all types being 12 months.
+
+![Screenshot (68)](https://github.com/user-attachments/assets/abc3b1bc-127e-42ba-8000-0b9ee0ac08cf)
+
+- **Churn Rate by Region**: this table highlights csncellation rates according to region. There are no csncellations in the East at all compared to other region while there are more cancellation in the North.
+
+![Screenshot (68)](https://github.com/user-attachments/assets/8dbf3f83-f72e-429f-b884-72fe25b135c6)
+
+- **Revenue by Region**: this table summarizes the revenue contribution of each region with all the regions summing around the same value but the  East has more revenue return(16,968,763) and the west being the lowest(16,864,376).
+
+![Screenshot (67)](https://github.com/user-attachments/assets/3ac99cc1-bea5-47c5-bec9-5a660d04e472)
+
+## SQL Queries ( Data Aggregation and Summarization)
+
+This section contains SQL queries used for summarizing and analyzing the Customer Segmentation data.
+```SQL
+select * from [dbo].[Capstone customer]
+```
+![Screenshot (107)](https://github.com/user-attachments/assets/4133b12b-da7c-464a-b7a6-0bd543deee4c)
+
+
+------Query 1-- Total number of customers from each region
+```SQL
+SELECT region,
+COUNT(DISTINCT customerid) AS total_customers
+FROM[dbo].[Capstone customer]
+GROUP By region;
+ ```
+![Screenshot (109)](https://github.com/user-attachments/assets/7f376029-ac11-425b-933a-98133aaaa9d7)
+
+
+------Query 2---Most popular subscription type by number of customers----
+```SQL
+SELECT TOP 1 subscriptiontype,
+COUNT(DISTINCT customerid) AS number_of_customers
+FROM [dbo].[Capstone customer]
+GROUP BY subscriptiontype
+ORDER BY number_of_customers DESC
+````
+![Screenshot (110)](https://github.com/user-attachments/assets/3d24cbcd-f136-4fa8-8709-2ebafbd49de4)
+
+
+------Query 3-----Customers who canceled their subscription within 6 months
+```SQL
+SELECT
+    customerid,
+    customername,
+    subscriptiontype,
+    subscriptionstart,
+    subscriptionend,
+    DATEDIFF(month, subscriptionstart, subscriptionend) AS subscription_duration
+FROM
+    [dbo].[Capstone customer]
+WHERE
+    canceled = 1
+    AND DATEDIFF(month, subscriptionstart, subscriptionend) <= 6;
+```
+![Screenshot (111)](https://github.com/user-attachments/assets/27c4024a-5062-4e79-9fd2-4fcfdcea461c)
+
+
+	-----Query 4----Average subscription duration for all customers.
+ ```SQL
+	SELECT
+    AVG(DATEDIFF(month, subscriptionstart, subscriptionend)) AS average_subscription_duration
+FROM
+    [dbo].[Capstone customer]
+```
+![Screenshot (112)](https://github.com/user-attachments/assets/bbabd6d3-2b1d-439a-b027-8879d04b7280)
+
+
+	------Query 5-----Customers with subscriptions longer than 12 months
+```SQL
+SELECT
+    customerid,
+    customername,
+    subscriptiontype,
+    subscriptionstart,
+    subscriptionend,
+    DATEDIFF(month, subscriptionstart, subscriptionend) AS subscription_duration
+FROM
+    [dbo].[Capstone customer]
+WHERE![Screenshot (112)](https://github.com/user-attachments/assets/fb77ad4f-3b5d-4bb3-916c-90da117d9fcf)
+
+    DATEDIFF(month, subscriptionstart, subscriptionend) > 12;
+```
+![Screenshot (113)](https://github.com/user-attachments/assets/e549da3f-9ed7-411b-aa25-b264f07d31b6)
+
+
+	-----Query 6----Total revenue by subscription type. 
+ ```SQL
+SELECT subscriptiontype,
+SUM(revenue) AS total_revenue
+FROM[dbo].[Capstone customer]
+GROUP BY subscriptiontype;
+```
+![Screenshot (114)](https://github.com/user-attachments/assets/e45aeb9e-0795-4e74-b1e5-02e3cbc459e6)
+
+	
+-----Query 7----Top 3 regions by subscription cancellations. 
+```SQL
+SELECT TOP 3 region,
+    COUNT(*) AS cancellation_count
+FROM [dbo].[Capstone customer]
+WHERE canceled = 1
+GROUP BY region
+ORDER BY cancellation_count DESC;
+```
+![Screenshot (115)](https://github.com/user-attachments/assets/17952655-f92e-4a7d-a1fc-40b6cf73605a)
+
+
+-----Query 8---Total number of active and canceled subscriptions. 
+```SQL
+SELECT
+    COUNT(CASE WHEN canceled = 1 THEN 1 END) AS cancelled_subscriptions,
+    COUNT(CASE WHEN canceled = 0 THEN 1 END) AS active_subscriptions
+FROM
+   [dbo].[Capstone customer]
+```
+![Screenshot (116)](https://github.com/user-attachments/assets/63126034-8a4f-4f61-862e-6e9d73316e23)
+
+
+## Data Visualization with Power Bi
+This visualizes key customer segments, cancellations, and subscription trends. 
+**Subscription Type Distribution**:Pie Chart to understand the proportion of each subscription type with key column being customer ID and Subscription type. 
+
+![Screenshot (76)](https://github.com/user-attachments/assets/0acad8c0-a0c3-4236-b734-90a248e3b674)
+
+**Active vs. Cancelled Subscriptions**: A Stacked Bar Chart to Compare active and cancelled subscriptions across different types with Active/False=O and Cancelled/True=1. 
+
+![Screenshot (71)](https://github.com/user-attachments/assets/b4bbed94-b2ec-4bdb-9490-3031c4caecfb)
+
+**Customer Activity by Duration**: Scatter Plot with key subscription Duration, revenue and Customer ID to Identify high-value customers based on subscription duration and revenue, which the highest is CUS 211. 
+
+![Screenshot (70)](https://github.com/user-attachments/assets/06c20627-6477-48d3-ae8d-d7c137437f8f)
+
+**Churn Analysis over time/ Subscription trend**: a line chart to track the number of cancellations over time with Key columns being customer ID, Subscription start, Cancelled with the peak cancellations in Quarter 2 and the lowest cancellations in Quarter 3 for both 2022 and 2023.  
+
+![Screenshot (117)](https://github.com/user-attachments/assets/08411d06-100a-455d-b32c-eba356484bfe)
+
+
+## Conclusion
+The customer segmentation service analysis provided invaluable insights into customer behavior, subscription patterns, and regional distribution. By leveraging SQL queries, visualizations, and detailed analysis, we have been able to:
+
+- Identify key customer segments based on subscription types and durations.
+
+- Understand patterns in subscription cancellations and active subscriptions.
+
+- Analyze regional performance to identify high and low-performing areas.
+
+- Examine the average subscription duration and its impact on customer retention.
+
+These insights are critical for making informed decisions that can enhance targeted marketing efforts, improve customer retention strategies, and optimize overall business performance. By continually analyzing customer data, we can adapt to changing trends and ensure sustained growth and customer satisfaction.
+
+
+
 
 
