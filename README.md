@@ -221,23 +221,23 @@ These insights are crucial for strategic decision-making, allowing us to optimiz
 
 # Customer Segmentation for a Subscription Service Analysis
 ---
-[Project overview](#project-overview)
+[Project overview-](#project-overview-)
 
-[Data description](#data-description)
+[Data description-](#data-description-)
 
 [Skills-](#skills-)
 
-[Repository structure](#repository-structure)
+[Repository structure-](#repository-structure-)
 
-[Tools Used](#tools-used)
+[Tools Used-](#tools-used-)
 
-[Data cleaning and Preparation](#data-cleaning-and-preparation)
+[Data cleaning and Preparation-](#data-cleaning-and-preparation-)
 
-[Data summarization with Pivot Table](#data-summarization-with-pivot-table)
+[Data summarization with Pivot Table-](#data-summarization-with-pivot-table-)
 
-[SQL queries-Data Aggregation and Summarization](#sql-queries-data-aggregation-and-summarization)
+[SQL queries-Data Aggregation and Summarization-](#sql-queries-data-aggregation-and-summarization-)
 
-[Data visualization with Power Bi](#data-visualization-with-power-bi)
+[Data visualization with Power Bi-](#data-visualization-with-power-bi-)
 
 [Conclusion-](#conclusion-)
 
