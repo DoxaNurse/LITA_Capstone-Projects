@@ -1,9 +1,7 @@
 # LITA_Capstone-Projects
 
-Customer Segmentation for a Subscription Service Analysis
+[Sales Performance Analysis](#sales-performance-analysis)
 
-# Sales Performance Analysis
----
 [Project Overview](#project-overview)
 
 [Data Description](#data-description)
@@ -26,6 +24,8 @@ Customer Segmentation for a Subscription Service Analysis
 
 [Customer Segmentation for a Subscription Service Analysis](#customer-segmentation-for-a-subscription-service-analysis)
 
+# Sales Performance Analysis
+---
 ## Project Overview
 This project analyzes the sales performance of a retail store. We will be exploring sales data to uncover key insights such as top-selling products, regional performance, and monthly sales trends. The goal is to produce an interactive Power BI dashboard that highlights all these findings. 
 ## Data Description
