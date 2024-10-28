@@ -20,9 +20,11 @@ Customer Segmentation for a Subscription Service Analysis
 
 [SQL Queries-Data Aggregation and Summarization](#sql-queries-data-aggregation-and-summarization)
 
-[Data Visualization with Power Bi](data-visualization-with-power-bi)
+[Data Visualization with Power Bi](#data-visualization-with-power-bi)
 
 [Conclusion](#conclusion)
+
+[Customer Segmentation for a Subscription Service Analysis](#customer-segmentation-for-a-subscription-service-analysis)
 
 ## Project Overview
 This project analyzes the sales performance of a retail store. We will be exploring sales data to uncover key insights such as top-selling products, regional performance, and monthly sales trends. The goal is to produce an interactive Power BI dashboard that highlights all these findings. 
