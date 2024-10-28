@@ -221,30 +221,30 @@ These insights are crucial for strategic decision-making, allowing us to optimiz
 
 # Customer Segmentation for a Subscription Service Analysis
 ---
-[Project Overview](#project-overview)
+[Project overview](#project-overview)
 
-[Data Description](#data-description)
+[Data description](#data-description)
 
-[Skills](#skills)
+[Skills-](#skills-)
 
-[Repository Structure](#repository-structure)
+[Repository structure](#repository-structure)
 
-[Tools used](#tools-used)
+[Tools Used](#tools-used)
 
-[Data Cleaning and Preparation](#data-cleaning-and-preparation)
+[Data cleaning and Preparation](#data-cleaning-and-preparation)
 
-[Data Summarization with Pivot Table](#data-summarization-with-pivot-table)
+[Data summarization with Pivot Table](#data-summarization-with-pivot-table)
 
-[SQL Queries-Data Aggregation and Summarization](#sql-queries-data-aggregation-and-summarization)
+[SQL queries-Data Aggregation and Summarization](#sql-queries-data-aggregation-and-summarization)
 
-[Data Visualization with Power Bi](#data-visualization-with-power-bi)
+[Data visualization with Power Bi](#data-visualization-with-power-bi)
 
-[Conclusion](#conclusion)
+[Conclusion-](#conclusion-)
 
-## Project Overview
+## Project overview
  This project involves analyzing customer data for a subscription service to identify segments and trends. The goal is to understand customer behavior, track subscription types, and identify key trends in cancellations and renewals. 
  
-## Data Description
+## Data description
 The dataset includes the following columns:
 - **Customer ID**: Unique identifier for each customer.
 - **Customer Name**: Name of the customer.
@@ -255,7 +255,7 @@ The dataset includes the following columns:
 - **Cancelled**: Indicates whether the subscription was cancelled.
 - **Subscription Duration**: Duration of the subscription in months.
 
-## Skills
+## Skills-
 - **SQL**: Proficient in writing complex queries, data manipulation, and database management.
 - **Microsoft Excel**: Advanced skills in data analysis, pivot tables, and data summarization
 - **Power BI**: Experienced in creating interactive dashboards and reports to visualize data insights.
@@ -263,24 +263,24 @@ The dataset includes the following columns:
 - **Data Cleaning**: Expertise in cleaning and preparing data for analysis.
 - **Statistical Analysis**: Applying statistical methods to analyze data and draw meaningful conclusions.
   
-## Repository Structure
+## Repository structure
 - **data/**: Raw data files.
 - **scripts/**: SQL queries and data cleaning scripts.
 - **visualizations/**: Images and files of the visualizations created.
 
-## Tools used
+## Tools Used
 - Microsoft Excel for data for data analysis, cleaning and visu-alization[Download Here](https://microsoft.com)
 - SQL- Structured query language for Querying of Data[Download Here](https://www.mysql.com)
 - Github for Portfolio building [Download Here](https://github.com)
 - Power Bi for Data Cleaning and visualization. [Download Here](https://powerbi.microsoft.com/en-us/downloads/)
 
-## Data Cleaning and Preparation
+## Data cleaning and Preparation
 In the intial phase, we carried out:
 1. **Data Loading and Inspection**: the sales data was downloaded and uploaded on the Microsoft excel sheet. 
 2. **Data formatting and cleaning**: the data was checked for duplicates and blanks which was cleared using the data tab and removing the blanks option on the find and select tab. 
 3. **handling missing variables**: The subscription duration was calculated with the DATEDIFF function and filling the necessary arrays, which returned 12 months and FLASH FILL was applied to get for the other rows.
 
-## Data Summarization with Pivot Table
+## Data summarization with Pivot Table
 - **Churn rate Analysis**: This pivot table shows the number of customers that cancelled their subscription(TRUE) versus the active customers(FALSE) in which those that did not cancel were more with about 3,000 difference.
 
 ![Screenshot (65)](https://github.com/user-attachments/assets/ea956c38-4aa0-4768-bbec-0bafec989c33)
@@ -309,7 +309,7 @@ In the intial phase, we carried out:
 
 ![Screenshot (67)](https://github.com/user-attachments/assets/3ac99cc1-bea5-47c5-bec9-5a660d04e472)
 
-## SQL Queries-Data Aggregation and Summarization
+## SQL queries-Data Aggregation and Summarization
 
 This section contains SQL queries used for summarizing and analyzing the Customer Segmentation data.
 ```SQL
@@ -418,7 +418,7 @@ FROM
 ![Screenshot (116)](https://github.com/user-attachments/assets/63126034-8a4f-4f61-862e-6e9d73316e23)
 
 
-## Data Visualization with Power Bi
+## Data visualization with Power Bi
 This visualizes key customer segments, cancellations, and subscription trends. 
 **Subscription Type Distribution**:Pie Chart to understand the proportion of each subscription type with key column being customer ID and Subscription type. 
 
@@ -437,7 +437,7 @@ This visualizes key customer segments, cancellations, and subscription trends.
 ![Screenshot (117)](https://github.com/user-attachments/assets/08411d06-100a-455d-b32c-eba356484bfe)
 
 
-## Conclusion
+## Conclusion-
 The customer segmentation service analysis provided invaluable insights into customer behavior, subscription patterns, and regional distribution. By leveraging SQL queries, visualizations, and detailed analysis, we have been able to:
 
 - Identify key customer segments based on subscription types and durations.
