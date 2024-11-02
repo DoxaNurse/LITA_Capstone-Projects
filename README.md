@@ -71,7 +71,7 @@ In the intial phase, we carried out:
 
 ![Screenshot (58)](https://github.com/user-attachments/assets/51098c4c-eff9-4221-8896-fff517911420)
 
-- **Hughest Perfroming Products**This table indicates the highest performing product in sales with the product being shoes and shirt going after with a difference of about 150,000 whilst the other analysis reveals that Hat consistently outperforms other products in terms of quantity sold with shoes trailing behind with about 5,000 difference.
+- **Highest Perfroming Products**This table indicates the highest performing product in sales with the product being shoes and shirt going after with a difference of about 150,000 whilst the other analysis reveals that Hat consistently outperforms other products in terms of quantity sold with shoes trailing behind with about 5,000 difference.
 
 ![Screenshot (59)](https://github.com/user-attachments/assets/20ecb298-17f0-4134-8b08-57ac4843a2eb)
 ![Screenshot (62)](https://github.com/user-attachments/assets/435218b3-0892-4f7e-ba6e-35f537ba453d)
@@ -100,7 +100,15 @@ sum (revenue) as Total_sales
 from [dbo].[capstone sales]
 group by Product
 ```
-![Screenshot (90)](https://github.com/user-attachments/assets/2c485f51-43cc-4f2f-a359-46f9225589a0)
+| Product  | Total sales| 
+|----------|------------|
+| Shoes    |  613380 |
+| Jacket   |  208230 |
+| Hat      | 316195  |
+|Socks     | 180785  |
+|Shirts    | 485600  |
+|Gloves    | 296900  |
+
 
 ```SQL
 Query 2-----number of sales transactions in each region----
@@ -109,7 +117,13 @@ count(revenue) as salestransactions
 from[dbo].[capstone sales]
 group by region
 ```
-![Screenshot (91)](https://github.com/user-attachments/assets/3429a47a-19f8-4e8d-afd9-cdfff0b2cf5a)
+
+| Region  | SalesTransaction| 
+|----------|------------|
+| North   |  2481 |
+| East   |  2483 |
+| South  | 2480  |
+|West    | 2471|
 
 ```SQL
 Query 3 ------highest selling product by total sales value---
@@ -118,7 +132,9 @@ sum(revenue) as total_sales
 from[dbo].[capstone sales]
 group by Product
 ```
-![Screenshot (92)](https://github.com/user-attachments/assets/cd3ff941-d80b-4691-bd6c-1ca2b64fe5e4)
+| Product  | Total sales| 
+|----------|------------|
+| Shoes    |  613380 |
 
 ```SQL
 Query 4------calculate Total Revenue per product-----
@@ -126,7 +142,14 @@ select product, sum(revenue) as Total_Revenue
 from [dbo].[capstone sales]
 Group by Product
 ```
-![Screenshot (93)](https://github.com/user-attachments/assets/a102470d-b29a-4626-95e0-377e29a855e6)
+| Product  | Total Revenue| 
+|----------|------------|
+| Shoes    |  613380 |
+| Jacket   |  208230 |
+| Hat      | 316195  |
+|Socks     | 180785  |
+|Shirts    | 485600  |
+|Gloves    | 296900  |
 
 ```SQL
 Query 5----monthly sales total for the current year----
@@ -137,7 +160,16 @@ where Year(OrderDate)=2024
 Group by DATENAME(MONTH, OrderDate), Month(OrderDate)
 order by MONTH(OrderDate)
 ```
-![Screenshot (94)](https://github.com/user-attachments/assets/5811867e-0c16-415f-a3e2-f806d3d05512)
+| SalesMonth|Monthlysales| 
+|----------|------------|
+| January    | 198400|
+| February   |  298800|
+| March     | 54780 |
+|April     | 39440|
+|May    | 44640|
+|June    | 148200 |
+|July    |37200 |
+|August | 174300|
 
 ```SQL
 Query 6-----top 5 customers by total purchase amount-----
@@ -148,8 +180,13 @@ group by Revenue, customer_id
 order by sum(revenue)
 desc
 ```
-![Screenshot (95)](https://github.com/user-attachments/assets/9c66aaa0-a958-45c3-81f4-4ef6b423c206)
-
+| Product  | Total sales| 
+|----------|------------|
+|Cus1378|	600|
+|Cus1131|	600|
+|Cus1257|	600|
+|Cus1329|	600|
+|Cus1186|	600|
 ```SQL
 Query 7----percentage of total sales cotnributed by each region------
 SELECT region,SUM(revenue) AS total_sales,
@@ -158,7 +195,12 @@ AS percentage_of_total_sales
 FROM[dbo].[capstone sales]
 GROUP By region:
 ```
-![Screenshot (96)](https://github.com/user-attachments/assets/fa148c0e-cc15-4dd8-8bcd-b608ebec4f33)
+| region | Total-sales| Percentage-of-total-sales|
+|----------|------------|------------------------|
+|North	    |387000	|  3                     |
+|East	|485925	         |  4                    |
+|South	 |927820	|         8              |
+|West	|300345	         |      2                |
 
 ```SQL
 Query 8-----Identify products with no sales in the last quarter-----
@@ -168,7 +210,11 @@ left Join [capstone sales] s on p. product =s.product
 And s.OrderDate >= '2023-10-01' and s.OrderDate < '2024-01-01'
 where s.Product IS NULL 
 ```
-![Screenshot (97)](https://github.com/user-attachments/assets/4a2d9ad8-7663-4ed0-9062-4ab8f55939aa)
+|Product|
+|-------|
+|Shoes|
+|Hat|
+|Shirts|
 
 ## Data Visualization with Power Bi
 Here, we will be analysing the columns on different visuals which will include sales overview, top-performing products, and regional breakdowns. 
@@ -325,8 +371,12 @@ COUNT(DISTINCT customerid) AS total_customers
 FROM[dbo].[Capstone customer]
 GROUP By region;
  ```
-![Screenshot (109)](https://github.com/user-attachments/assets/7f376029-ac11-425b-933a-98133aaaa9d7)
-
+|Region  | total_customers  |
+|--------|------------------|
+|East	 | 5                |
+|North	|5|
+|South	|5|
+|West	|5|
 
 ------Query 2---Most popular subscription type by number of customers----
 ```SQL
@@ -336,7 +386,9 @@ FROM [dbo].[Capstone customer]
 GROUP BY subscriptiontype
 ORDER BY number_of_customers DESC
 ````
-![Screenshot (110)](https://github.com/user-attachments/assets/3d24cbcd-f136-4fa8-8709-2ebafbd49de4)
+|subscription-type  | number-of-customers  |
+|-------------------|----------------------|
+|Basic	 |              10                  |
 
 
 ------Query 3-----Customers who canceled their subscription within 6 months
@@ -354,8 +406,9 @@ WHERE
     canceled = 1
     AND DATEDIFF(month, subscriptionstart, subscriptionend) <= 6;
 ```
-![Screenshot (111)](https://github.com/user-attachments/assets/27c4024a-5062-4e79-9fd2-4fcfdcea461c)
-
+|customerid	|customername	|subscriptiontype	|subscriptionstart	|subscriptionend	|subscription_duration|
+|---------------|---------------|-----------------------|------------------------|-----------------------|---------------------|
+|nil|nil|nil|nil|nil|nil|
 
 	-----Query 4----Average subscription duration for all customers.
  ```SQL
@@ -364,8 +417,9 @@ WHERE
 FROM
     [dbo].[Capstone customer]
 ```
-![Screenshot (112)](https://github.com/user-attachments/assets/bbabd6d3-2b1d-439a-b027-8879d04b7280)
-
+|average_subscription_duration|
+|-----------------------------|
+|12|
 
 	------Query 5-----Customers with subscriptions longer than 12 months
 ```SQL
@@ -382,7 +436,9 @@ WHERE![Screenshot (112)](https://github.com/user-attachments/assets/fb77ad4f-3b5
 
     DATEDIFF(month, subscriptionstart, subscriptionend) > 12;
 ```
-![Screenshot (113)](https://github.com/user-attachments/assets/e549da3f-9ed7-411b-aa25-b264f07d31b6)
+|customerid	|customername	|subscriptiontype	|subscriptionstart	|subscriptionend	|subscription_duration|
+|---------------|---------------|-----------------------|------------------------|-----------------------|---------------------|
+|nil|nil|nil|nil|nil|nil|
 
 
 	-----Query 6----Total revenue by subscription type. 
@@ -392,7 +448,11 @@ SUM(revenue) AS total_revenue
 FROM[dbo].[Capstone customer]
 GROUP BY subscriptiontype;
 ```
-![Screenshot (114)](https://github.com/user-attachments/assets/e45aeb9e-0795-4e74-b1e5-02e3cbc459e6)
+|subscriptiontype|	total_revenue|
+|----------------|-------------------|
+|Basic	          |33776735          |
+|Premium	|16899064|
+|Standard	|16864376|
 
 	
 -----Query 7----Top 3 regions by subscription cancellations. 
@@ -404,8 +464,11 @@ WHERE canceled = 1
 GROUP BY region
 ORDER BY cancellation_count DESC;
 ```
-![Screenshot (115)](https://github.com/user-attachments/assets/17952655-f92e-4a7d-a1fc-40b6cf73605a)
-
+|region	|cancellation_count|
+|-------|------------------|
+|North	|5067|
+|South	|5064|
+|West	|5044|
 
 -----Query 8---Total number of active and canceled subscriptions. 
 ```SQL
@@ -415,7 +478,9 @@ SELECT
 FROM
    [dbo].[Capstone customer]
 ```
-![Screenshot (116)](https://github.com/user-attachments/assets/63126034-8a4f-4f61-862e-6e9d73316e23)
+|cancelled_subscriptions	|active_subscriptions|
+|-------------------------------|--------------------|
+|15175	|18612|
 
 
 ## Data visualization with Power Bi-
